@@ -25,4 +25,3 @@ require("lazy").setup({ import = "custom/plugins" }, {
 		notify = faslse,
 	},
 })
-
