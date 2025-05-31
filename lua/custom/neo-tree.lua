@@ -10,3 +10,5 @@ require("neo-tree").setup({
     }
   }
 })
+
+vim.keymap.set("n", "<leader>nt", vim.cmd.Neotree)
