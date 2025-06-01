@@ -1,14 +1,25 @@
 return {
-	"nvim-neo-tree/neo-tree.nvim",
-	version = "*",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-		"MunifTanjim/nui.nvim",
-	},
-    opts = {
-      window = {
-        position = "right",
+ {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "*",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
     },
+    lazy = false,
+
+    config = function()
+    
+      require("neo-tree").setup({
+        close_if_last_window = true, 
+        window = {
+          position = "right",
+          width = 25,
+        },
+
+  })
+      vim.keymap.set("n", "<leader>t", "<Cmd>Neotree reveal<CR>")
+    end,
   },
 }
