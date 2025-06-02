@@ -15,9 +15,12 @@ return {
         close_if_last_window = true, 
         window = {
           position = "right",
-          width = 30,
+          width = 50,
         },
-
+        enable_git_status = true,
+        name = {
+          use_git_status_colors = true,
+        },
   })
       vim.keymap.set("n", "<leader>t", "<Cmd>Neotree reveal<CR>")
     end,
